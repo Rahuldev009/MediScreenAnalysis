@@ -1,7 +1,7 @@
 package com.example.MediScreenAnalysis.service;
 
-import com.example.MediScreenAnalysis.controller.dto.PatientDto;
-import com.example.MediScreenAnalysis.controller.dto.PatientNoteDto;
+import com.example.MediScreenAnalysis.dto.PatientDto;
+import com.example.MediScreenAnalysis.dto.PatientNoteDto;
 import com.example.MediScreenAnalysis.model.PatientReport;
 import com.example.MediScreenAnalysis.utils.Utilities;
 import org.springframework.beans.factory.annotation.Autowired;

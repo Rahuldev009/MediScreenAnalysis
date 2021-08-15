@@ -1,0 +1,37 @@
+services:
+  patients:
+    container_name: patients
+    image: patients
+    ports:
+      - "8081:8081"
+
+  mysql:
+    image: mysql:8.0.26
+    container_name: mysql
+    ports:
+      - "3306:3306"
+
+    environment:
+      MYSQL_DATABASE: MediScreenDB
+      MYSQL_ROOT_PASSWORD: password
+
+  notes:
+    image: notes
+    container_name: notes
+    ports:
+      - "8082:8082"
+
+  mongo:
+    image: mongo
+    container_name: mongo
+    ports:
+      - "27017:27017"
+
+    environment:
+      MONGO_INITDB_DATABASE: Mediscreen
+
+  report:
+    image: reports
+    container_name: reports
+    ports:
+      - "8080:8080"
