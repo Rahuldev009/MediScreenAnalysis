@@ -1,4 +1,4 @@
-package com.example.MediScreenAnalysis.controller.dto;
+package com.example.MediScreenAnalysis.dto;
 
 public class PatientNoteDto {
 

@@ -1,6 +1,6 @@
 package com.example.MediScreenAnalysis.service;
 
-import com.example.MediScreenAnalysis.controller.dto.PatientNoteDto;
+import com.example.MediScreenAnalysis.dto.PatientNoteDto;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import org.springframework.stereotype.Service;
@@ -14,7 +14,7 @@ public class PatientNoteService {
         WebClient.Builder webClientBuilder = WebClient.builder();
         String JsonResponseFrom = webClientBuilder.build()
                 .get()
-                .uri("http://localhost:8082/getPatientNotes?patId=" + patId)
+                .uri("http://notes:8082/getPatientNotes?patId=" + patId)
                 .retrieve()
                 .bodyToMono(String.class)
                 .block();
@@ -24,4 +24,5 @@ public class PatientNoteService {
                 }.getType());
         return patientNoteList;
     }
+
 }
